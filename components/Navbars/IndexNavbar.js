@@ -2,7 +2,6 @@ import React from "react";
 import Link from "next/link";
 // components
 
-import IndexDropdown from "components/Dropdowns/IndexDropdown.js";
 
 export default function Navbar(props) {
   const [navbarOpen, setNavbarOpen] = React.useState(false);
@@ -49,9 +48,6 @@ export default function Navbar(props) {
             </ul>
             <ul className="flex flex-col lg:flex-row list-none lg:ml-auto">
               <li className="flex items-center">
-                <IndexDropdown />
-              </li>
-              <li className="flex items-center">
                 <a
                   className="text-gray-300 hover:text-white px-3 py-4 lg:py-2 flex items-center text-xs uppercase font-bold"
                   href="https://www.japox.com/"
@@ -62,14 +58,15 @@ export default function Navbar(props) {
                   <span className="lg:hidden inline-block ml-2">Buy Cars</span>
                 </a>
               </li>
-
               <li className="flex items-center">
-                <button
-                  className="bg-blueGray-700 text-white active:bg-blueGray-600 text-xs font-bold uppercase px-4 py-2 rounded shadow hover:shadow-lg outline-none focus:outline-none lg:mr-1 lg:mb-0 ml-3 mb-3 ease-linear transition-all duration-150"
-                  type="button"
+                <a
+                  className="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded text-xs font-bold uppercase shadow hover:shadow-lg flex items-center ml-3 mb-3 lg:mb-0"
+                  href="https://www.tiktok.com/@japox_corp"
+                  target="_blank"
+                  rel="noopener noreferrer"
                 >
-                  <i className="fas fa-arrow-alt-circle-down"></i> Download
-                </button>
+                  <i className="fab fa-tiktok mr-2"></i> TikTok
+                </a>
               </li>
             </ul>
           </div>

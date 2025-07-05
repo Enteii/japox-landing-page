@@ -43,7 +43,7 @@ const IndexDropdown = () => {
         >
           Admin Layout
         </span>
-        <Link href="/admin/dashboard">
+        <Link href="/admin/dashboard" legacyBehavior>
           <a
             href="#pablo"
             className={
@@ -53,7 +53,7 @@ const IndexDropdown = () => {
             Dashboard
           </a>
         </Link>
-        <Link href="/admin/settings">
+        <Link href="/admin/settings" legacyBehavior>
           <a
             href="#pablo"
             className={
@@ -63,7 +63,7 @@ const IndexDropdown = () => {
             Settings
           </a>
         </Link>
-        <Link href="/admin/tables">
+        <Link href="/admin/tables" legacyBehavior>
           <a
             href="#pablo"
             className={
@@ -73,7 +73,7 @@ const IndexDropdown = () => {
             Tables
           </a>
         </Link>
-        <Link href="/admin/maps">
+        <Link href="/admin/maps" legacyBehavior>
           <a
             href="#pablo"
             className={
@@ -91,7 +91,7 @@ const IndexDropdown = () => {
         >
           Auth Layout
         </span>
-        <Link href="/auth/login">
+        <Link href="/auth/login" legacyBehavior>
           <a
             href="#pablo"
             className={
@@ -101,7 +101,7 @@ const IndexDropdown = () => {
             Login
           </a>
         </Link>
-        <Link href="/auth/register">
+        <Link href="/auth/register" legacyBehavior>
           <a
             href="#pablo"
             className={
@@ -119,7 +119,7 @@ const IndexDropdown = () => {
         >
           No Layout
         </span>
-        <Link href="/landing">
+        <Link href="/landing" legacyBehavior>
           <a
             href="#pablo"
             className={
@@ -129,7 +129,7 @@ const IndexDropdown = () => {
             Landing
           </a>
         </Link>
-        <Link href="/profile">
+        <Link href="/profile" legacyBehavior>
           <a
             href="#pablo"
             className={

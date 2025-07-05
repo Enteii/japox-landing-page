@@ -14,28 +14,28 @@ export default function Index() {
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
               <h1 className="font-extrabold text-6xl text-red-600">JAPOX</h1>
-              <p className="text-xl text-blueGray-500 mb-4">Calidad focus on Premium</p>
+              <p className="text-xl text-gray-400 mb-4">Calidad focus on Premium</p>
               <h2 className="font-semibold text-3xl text-red-600 mb-2">
                 Premium Japanese Used Car Export
               </h2>
-              <p className="mt-2 text-lg leading-relaxed text-blueGray-500">
+              <p className="mt-2 text-lg leading-relaxed text-gray-300">
                 JAPOX Corporation (ジャポックス株式会社) is Japan's most innovative used
                 car export company, revolutionizing the global automotive trade
                 through cutting-edge e-commerce platforms and uncompromising quality
                 standards.
               </p>
-              <div className="flex mt-6 space-x-6">
+              <div className="flex mt-6 space-x-10">
                 <div className="text-center">
                   <span className="text-2xl font-bold text-red-600 block">1.2M+</span>
-                  <span className="text-blueGray-500 text-sm uppercase">Annual Market Units</span>
+                  <span className="text-gray-400 text-sm uppercase">Annual Market Units</span>
                 </div>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-red-600 block">4</span>
-                  <span className="text-blueGray-500 text-sm uppercase">Continents Served</span>
+                  <span className="text-gray-400 text-sm uppercase">Continents Served</span>
                 </div>
                 <div className="text-center">
                   <span className="text-2xl font-bold text-red-600 block">2021</span>
-                  <span className="text-blueGray-500 text-sm uppercase">Tokyo Gov Approved</span>
+                  <span className="text-gray-400 text-sm uppercase">Tokyo Gov Approved</span>
                 </div>
               </div>
               <div className="mt-12">

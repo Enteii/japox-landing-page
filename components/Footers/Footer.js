@@ -3,7 +3,7 @@ import React from "react";
 export default function Footer() {
   return (
     <>
-      <footer className="relative bg-gray-200 pt-8 pb-6">
+      <footer className="relative bg-black pt-8 pb-6">
         <div
           className="bottom-auto top-0 left-0 right-0 w-full absolute pointer-events-none overflow-hidden -mt-20 h-20"
           style={{ transform: "translateZ(0)" }}
@@ -66,7 +66,7 @@ export default function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        className="text-gray-300 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        className="text-gray-300 hover:text-white font-semibold block pb-2 text-sm"
                         href="https://japox.jp/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -76,7 +76,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-300 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        className="text-gray-300 hover:text-white font-semibold block pb-2 text-sm"
                         href="https://www.japox.com/"
                         target="_blank"
                         rel="noopener noreferrer"
@@ -86,7 +86,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-300 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        className="text-gray-300 hover:text-white font-semibold block pb-2 text-sm"
                         href="https://www.japox.com/"
                       >
                         Github
@@ -94,7 +94,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-300 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        className="text-gray-300 hover:text-white font-semibold block pb-2 text-sm"
                         href="https://japox.jp/"
                       >
                         Free Products
@@ -109,7 +109,7 @@ export default function Footer() {
                   <ul className="list-unstyled">
                     <li>
                       <a
-                        className="text-gray-300 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        className="text-gray-300 hover:text-white font-semibold block pb-2 text-sm"
                         href="https://japox.jp/"
                       >
                         MIT License
@@ -117,7 +117,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-300 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        className="text-gray-300 hover:text-white font-semibold block pb-2 text-sm"
                         href="https://japox.jp/"
                       >
                         Terms & Conditions
@@ -125,7 +125,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-300 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        className="text-gray-300 hover:text-white font-semibold block pb-2 text-sm"
                         href="https://japox.jp/"
                       >
                         Privacy Policy
@@ -133,7 +133,7 @@ export default function Footer() {
                     </li>
                     <li>
                       <a
-                        className="text-gray-300 hover:text-gray-800 font-semibold block pb-2 text-sm"
+                        className="text-gray-300 hover:text-white font-semibold block pb-2 text-sm"
                         href="https://japox.jp/"
                       >
                         Contact Us
@@ -151,7 +151,7 @@ export default function Footer() {
                 Copyright © {new Date().getFullYear()} JAPOX by{" "}
                 <a
                   href="https://japox.jp/"
-                  className="text-gray-400 hover:text-gray-800"
+                  className="text-gray-400 hover:text-white"
                   target="_blank"
                   rel="noopener noreferrer"
                 >

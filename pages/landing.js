@@ -62,7 +62,7 @@ export default function Landing() {
           </div>
         </div>
 
-        <section className="pb-20 bg-gray-200 -mt-24">
+        <section className="pb-20 bg-black -mt-24">
           <div className="container mx-auto px-4">
             <div className="flex flex-wrap">
               <div className="lg:pt-12 pt-6 w-full md:w-4/12 px-4 text-center">
@@ -131,7 +131,7 @@ export default function Landing() {
                   JavaScript.
                 </p>
                 <Link href="/" legacyBehavior>
-                  <a href="#pablo" className="font-bold text-gray-700 mt-8">
+                  <a href="#pablo" className="font-bold text-gray-300 mt-8">
                     Check Notus NextJS!
                   </a>
                 </Link>
@@ -153,7 +153,7 @@ export default function Landing() {
                     >
                       <polygon
                         points="-30,95 583,95 583,65"
-                        className="text-gray-700 fill-current"
+                        className="text-gray-300 fill-current"
                       ></polygon>
                     </svg>
                     <h4 className="text-xl font-bold text-white">
@@ -434,7 +434,7 @@ export default function Landing() {
               y="0"
             >
               <polygon
-                className="text-gray-800 fill-current"
+                className="text-gray-300 fill-current"
                 points="2560 0 2560 100 0 100"
               ></polygon>
             </svg>

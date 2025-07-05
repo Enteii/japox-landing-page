@@ -64,7 +64,7 @@ export default function Index() {
             y="0"
           >
             <polygon
-              className="text-gray-800 fill-current"
+              className="text-gray-300 fill-current"
               points="2560 0 2560 100 0 100"
             ></polygon>
           </svg>
@@ -87,7 +87,7 @@ export default function Index() {
                   >
                     <polygon
                       points="-30,95 583,95 583,65"
-                      className="text-gray-800 fill-current"
+                      className="text-gray-300 fill-current"
                     ></polygon>
                   </svg>
                   <h4 className="text-xl font-bold text-white">
@@ -187,7 +187,7 @@ export default function Index() {
               <a
                 href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index"
                 target="_blank"
-                className="font-bold text-gray-700 hover:text-gray-200 ease-linear transition-all duration-150"
+                className="font-bold text-gray-300 hover:text-white ease-linear transition-all duration-150"
               >
                 View All{" "}
                 <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
@@ -375,7 +375,7 @@ export default function Index() {
               <a
                 href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index"
                 target="_blank"
-                className="font-bold text-gray-700 hover:text-gray-200 ease-linear transition-all duration-150"
+                className="font-bold text-gray-300 hover:text-white ease-linear transition-all duration-150"
               >
                 View all{" "}
                 <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
@@ -564,13 +564,13 @@ export default function Index() {
             </div>
 
             <div className="w-full md:w-4/12 px-4 mr-auto ml-auto mt-32 relative">
-              <i className="fab fa-github text-gray-700 absolute text-55 -top-150-px -right-100 left-auto opacity-80"></i>
+              <i className="fab fa-github text-gray-600 absolute text-55 -top-150-px -right-100 left-auto opacity-80"></i>
             </div>
           </div>
         </div>
       </section>
 
-      <section className="pb-16 bg-gray-200 relative pt-32">
+      <section className="pb-16 bg-black relative pt-32">
         <div
           className="-mt-20 top-0 bottom-auto left-0 right-0 w-full absolute h-20"
           style={{ transform: "translateZ(0)" }}

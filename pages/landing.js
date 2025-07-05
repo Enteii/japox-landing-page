@@ -32,9 +32,10 @@ export default function Landing() {
                     Your story starts with us.
                   </h1>
                   <p className="mt-4 text-lg text-blueGray-200">
-                    This is a simple example of a Landing Page you can build
-                    using Notus NextJS. It features multiple CSS components
-                    based on the Tailwind CSS design system.
+                    Stay connected with JAPOX across all of our social media
+                    channels. Follow our TikTok for the latest car arrivals and
+                    behind-the-scenes videos, and join us on Instagram, X, and
+                    YouTube for more updates.
                   </p>
                 </div>
               </div>
@@ -205,7 +206,7 @@ export default function Landing() {
                   <div className="text-blueGray-500 p-3 text-center inline-flex items-center justify-center w-16 h-16 mb-6 shadow-lg rounded-full bg-blueGray-200">
                     <i className="fas fa-rocket text-xl"></i>
                   </div>
-                  <h3 className="text-3xl font-semibold">A growing company</h3>
+                  <h3 className="text-3xl font-semibold">Join our community</h3>
                   <p className="mt-4 text-lg leading-relaxed text-blueGray-500">
                     The extension comes with three pre-built pages to help you
                     get started faster. You can change the text and images and
@@ -215,13 +216,13 @@ export default function Landing() {
                     <li className="py-2">
                       <div className="flex items-center">
                         <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-100 mr-3">
-                            <i className="fas fa-fingerprint"></i>
+                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-red-600 mr-3">
+                            <i className="fab fa-tiktok"></i>
                           </span>
                         </div>
                         <div>
                           <h4 className="text-blueGray-500">
-                            Carefully crafted components
+                            Follow us on TikTok for daily updates
                           </h4>
                         </div>
                       </div>
@@ -229,13 +230,13 @@ export default function Landing() {
                     <li className="py-2">
                       <div className="flex items-center">
                         <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-100 mr-3">
-                            <i className="fab fa-html5"></i>
+                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-pink-500 mr-3">
+                            <i className="fab fa-instagram"></i>
                           </span>
                         </div>
                         <div>
                           <h4 className="text-blueGray-500">
-                            Amazing page examples
+                            Join us on Instagram and YouTube
                           </h4>
                         </div>
                       </div>
@@ -243,13 +244,13 @@ export default function Landing() {
                     <li className="py-2">
                       <div className="flex items-center">
                         <div>
-                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-blueGray-500 bg-blueGray-100 mr-3">
-                            <i className="far fa-paper-plane"></i>
+                          <span className="text-xs font-semibold inline-block py-1 px-2 uppercase rounded-full text-white bg-lightBlue-500 mr-3">
+                            <i className="fab fa-twitter"></i>
                           </span>
                         </div>
                         <div>
                           <h4 className="text-blueGray-500">
-                            Dynamic components
+                            Follow us on X and Facebook
                           </h4>
                         </div>
                       </div>

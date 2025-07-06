@@ -10,7 +10,7 @@ export default function Index() {
     <>
       <IndexNavbar fixed />
       <section className="header hero-bg relative pt-16 items-center flex h-screen max-h-860-px overflow-hidden">
-        <div className="container mx-auto items-center flex flex-wrap">
+        <div className="w-full mx-auto flex flex-wrap justify-center px-4">
           <div className="w-full px-4 text-center">
             <div className="pt-32 sm:pt-0">
               <h2 className="hero-title font-semibold text-4xl">
@@ -42,11 +42,6 @@ export default function Index() {
             </div>
           </div>
         </div>
-        <img
-          className="absolute top-0 b-auto right-0 pt-16 sm:w-6/12 -mt-48 sm:mt-0 w-10/12 max-h-860-px"
-          src="/img/pattern_nextjs.png"
-          alt="..."
-        />
       </section>
 
       <section className="py-20 bg-black">

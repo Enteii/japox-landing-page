@@ -72,22 +72,31 @@ export default function Index() {
             </div>
             <div className="detailed-info">
               <div className="info-section">
-                <h3>🏢 Company Heritage</h3>
-                <p>
-                  Founded to export vehicles beyond the reach of major trading companies, JAPOX now operates Japan's largest used car buying franchise.
-                </p>
+                <div className="info-image">Image</div>
+                <div className="info-text">
+                  <h3>🏢 Company Heritage</h3>
+                  <p>
+                    Founded to export vehicles beyond the reach of major trading companies, JAPOX now operates Japan's largest used car buying franchise.
+                  </p>
+                </div>
               </div>
               <div className="info-section">
-                <h3>🌍 Global Reach & Markets</h3>
-                <p>
-                  Delivering premium Japanese vehicles across Africa, Asia, South America and Central Asia, with a focus on sustainable transportation.
-                </p>
+                <div className="info-image">Image</div>
+                <div className="info-text">
+                  <h3>🌍 Global Reach & Markets</h3>
+                  <p>
+                    Delivering premium Japanese vehicles across Africa, Asia, South America and Central Asia, with a focus on sustainable transportation.
+                  </p>
+                </div>
               </div>
               <div className="info-section">
-                <h3>⚙️ Technology Innovation</h3>
-                <p>
-                  Our proprietary platform connects overseas buyers directly with Japanese dealers for real-time auctions and full export support.
-                </p>
+                <div className="info-image">Image</div>
+                <div className="info-text">
+                  <h3>⚙️ Technology Innovation</h3>
+                  <p>
+                    Our proprietary platform connects overseas buyers directly with Japanese dealers for real-time auctions and full export support.
+                  </p>
+                </div>
               </div>
             </div>
             <div className="features-grid">

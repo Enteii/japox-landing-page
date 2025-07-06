@@ -9,11 +9,11 @@ export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
-      <section className="header relative pt-16 items-center flex h-screen max-h-860-px">
+      <section className="header hero-bg relative pt-16 items-center flex h-screen max-h-860-px overflow-hidden">
         <div className="container mx-auto items-center flex flex-wrap">
           <div className="w-full md:w-8/12 lg:w-6/12 xl:w-6/12 px-4">
             <div className="pt-32 sm:pt-0">
-              <h2 className="font-semibold text-4xl text-red-600">
+              <h2 className="hero-title font-semibold text-4xl">
                 JAPOX - Premium Japanese Performance
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-gray-200">
@@ -32,7 +32,7 @@ export default function Index() {
                 </a>
                 <a
                   href="https://www.japox.com/"
-                  className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-700 active:bg-gray-600 uppercase text-sm shadow hover:shadow-lg"
+                  className="github-star ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-700 hover:bg-gray-600 active:bg-gray-500 uppercase text-sm shadow hover:shadow-lg"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
@@ -167,7 +167,7 @@ export default function Index() {
               <h3 className="text-3xl mb-2 font-semibold leading-normal">
                 Join our Community
               </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-300">
+              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-200">
                 Stay connected with JAPOX across social media for the latest cars and company news.
               </p>
               <div className="block pb-6">
@@ -187,7 +187,7 @@ export default function Index() {
               <a
                 href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index"
                 target="_blank"
-                className="font-bold text-gray-300 hover:text-white ease-linear transition-all duration-150"
+                className="font-bold text-gray-200 hover:text-white ease-linear transition-all duration-150"
               >
                 View All{" "}
                 <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
@@ -337,12 +337,12 @@ export default function Index() {
               <h3 className="text-3xl mb-2 font-semibold leading-normal">
                 Javascript Components
               </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-300">
+              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-200">
                 In order to create a great User Experience some components
                 require JavaScript. In this way you can manipulate the elements
                 on the page and give more options to your users.
               </p>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-300">
+              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-200">
                 We created a set of Components that are dynamic and come to help
                 you.
               </p>
@@ -375,7 +375,7 @@ export default function Index() {
               <a
                 href="https://www.creative-tim.com/learning-lab/tailwind/nextjs/alerts/notus?ref=nnjs-index"
                 target="_blank"
-                className="font-bold text-gray-300 hover:text-white ease-linear transition-all duration-150"
+                className="font-bold text-gray-200 hover:text-white ease-linear transition-all duration-150"
               >
                 View all{" "}
                 <i className="fa fa-angle-double-right ml-1 leading-relaxed"></i>
@@ -472,7 +472,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="block relative z-1 bg-gray-600">
+      <section className="block relative z-1 bg-gray-800">
         <div className="container mx-auto">
           <div className="justify-center flex flex-wrap">
             <div className="w-full lg:w-12/12 px-4  -mt-24">
@@ -527,7 +527,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 bg-gray-600 overflow-hidden">
+      <section className="py-20 bg-gray-800 overflow-hidden">
         <div className="container mx-auto pb-64">
           <div className="flex flex-wrap justify-center">
             <div className="w-full md:w-5/12 px-12 md:px-4 ml-auto mr-auto md:mt-64">
@@ -537,11 +537,11 @@ export default function Index() {
               <h3 className="text-3xl mb-2 font-semibold leading-normal text-white">
                 Open Source
               </h3>
-              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-400">
+              <p className="text-lg font-light leading-relaxed mt-4 mb-4 text-gray-200">
                 Since{" "}
                 <a
                   href="https://tailwindcss.com/?ref=creative"
-                  className="text-gray-300"
+                  className="text-gray-200"
                   target="_blank"
                 >
                   Tailwind CSS
@@ -550,14 +550,14 @@ export default function Index() {
                 too. You can give this version a try to feel the design and also
                 test the quality of the code!
               </p>
-              <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-400">
+              <p className="text-lg font-light leading-relaxed mt-0 mb-4 text-gray-200">
                 Get it free on Github and please help us spread the news with a
                 Star!
               </p>
               <a
                 href="https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index"
                 target="_blank"
-                className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-700 active:bg-gray-600 uppercase text-sm shadow hover:shadow-lg"
+                className="github-star mt-4 inline-block text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-700 hover:bg-gray-600 active:bg-gray-500 uppercase text-sm shadow hover:shadow-lg"
               >
                 Github Star
               </a>
@@ -618,7 +618,7 @@ export default function Index() {
                 <a
                   href="https://github.com/creativetimofficial/notus-nextjs?ref=nnjs-index"
                   target="_blank"
-                  className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-700 active:bg-gray-600 uppercase text-sm shadow hover:shadow-lg"
+                  className="github-star sm:ml-1 text-white font-bold px-6 py-4 rounded outline-none focus:outline-none mr-1 mb-1 bg-gray-700 hover:bg-gray-600 active:bg-gray-500 uppercase text-sm shadow hover:shadow-lg"
                 >
                   <i className="fab fa-github text-lg mr-1"></i>
                   <span>Help With a Star</span>

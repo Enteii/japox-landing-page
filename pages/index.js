@@ -50,12 +50,11 @@ export default function Index() {
       </section>
 
       <section className="py-20 bg-black">
-        <div className="mx-auto px-4 max-w-none">
-          <div className="company-info w-full">
-            <h2 className="company-title">Premium Japanese Used Car Export</h2>
-            <p className="company-description">
-              JAPOX Corporation (ジャポックス株式会社) revolutionizes the global automobile trade through cutting-edge e-commerce and uncompromising quality.
-            </p>
+        <div className="company-info">
+          <h2 className="company-title">Premium Japanese Used Car Export</h2>
+          <p className="company-description">
+            JAPOX Corporation (ジャポックス株式会社) revolutionizes the global automobile trade through cutting-edge e-commerce and uncompromising quality.
+          </p>
             <div className="stats-row">
               <div className="stat-box">
                 <span className="stat-number">1.2M+</span>
@@ -134,7 +133,6 @@ export default function Index() {
               </a>
             </div>
           </div>
-        </div>
       </section>
       <Footer />
     </>

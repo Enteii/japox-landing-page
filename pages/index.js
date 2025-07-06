@@ -4,16 +4,17 @@ import Link from "next/link";
 
 import IndexNavbar from "components/Navbars/IndexNavbar.js";
 import Footer from "components/Footers/Footer.js";
+import TikTokFeed from "components/TikTokFeed";
 
 export default function Index() {
   return (
     <>
       <IndexNavbar fixed />
       <section className="header hero-bg relative pt-16 items-center flex h-screen max-h-860-px overflow-hidden">
-        <div className="w-full mx-auto flex flex-wrap justify-center px-4">
-          <div className="w-full px-4 text-center">
-            <div className="pt-32 sm:pt-0">
-              <h2 className="hero-title font-semibold text-4xl">
+        <div className="container mx-auto flex flex-wrap items-start px-4">
+          <div className="w-full md:w-6/12 px-4">
+            <div className="pt-32 sm:pt-0 text-left">
+              <h2 className="hero-title font-semibold text-4xl text-red-600">
                 JAPOX - Premium Japanese Performance
               </h2>
               <p className="mt-4 text-lg leading-relaxed text-gray-200">
@@ -41,10 +42,13 @@ export default function Index() {
               </div>
             </div>
           </div>
+          <div className="w-full md:w-6/12 px-4 mt-10 md:mt-32">
+            <TikTokFeed />
+          </div>
         </div>
       </section>
 
-      <section className="py-20 bg-black">
+      <section className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-black">
         <div className="company-info">
           <h2 className="company-title">Premium Japanese Used Car Export</h2>
           <p className="company-description">

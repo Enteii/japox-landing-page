@@ -48,7 +48,7 @@ export default function Index() {
         </div>
       </section>
 
-      <section className="py-20 bg-gradient-to-b from-gray-900 via-gray-800 to-black">
+      <section className="py-20">
         <div className="company-info">
           <h2 className="company-title">Premium Japanese Used Car Export</h2>
           <p className="company-description">

@@ -50,8 +50,8 @@ export default function Index() {
       </section>
 
       <section className="py-20 bg-black">
-        <div className="container mx-auto px-4">
-          <div className="company-info mx-auto">
+        <div className="mx-auto px-4 max-w-none">
+          <div className="company-info w-full">
             <h2 className="company-title">Premium Japanese Used Car Export</h2>
             <p className="company-description">
               JAPOX Corporation (ジャポックス株式会社) revolutionizes the global automobile trade through cutting-edge e-commerce and uncompromising quality.

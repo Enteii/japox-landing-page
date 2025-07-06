@@ -131,7 +131,11 @@ export default function Landing() {
                   JavaScript.
                 </p>
                 <Link href="/" legacyBehavior>
+<<<<<<< HEAD
                   <a href="#pablo" className="font-bold text-gray-300 mt-8">
+=======
+                  <a href="#pablo" className="font-bold text-blueGray-700 mt-8">
+>>>>>>> main
                     Check Notus NextJS!
                   </a>
                 </Link>

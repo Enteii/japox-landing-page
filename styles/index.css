@@ -21,7 +21,8 @@ body {
   to { text-shadow: 0 0 20px rgba(225,45,57,1); }
 }
 .company-info {
-  @apply max-w-3xl mx-auto p-8 bg-gray-900 bg-opacity-90 rounded-2xl border border-red-800 backdrop-blur;
+  @apply max-w-3xl mx-auto p-8 rounded-2xl border border-red-800 backdrop-blur shadow-2xl;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%, #000000 100%);
 }
 .stats-row {
   @apply grid grid-cols-1 sm:grid-cols-3 gap-4 my-6;
@@ -36,10 +37,10 @@ body {
   @apply text-gray-400 text-xs uppercase;
 }
 .detailed-info {
-  @apply mt-6;
+  @apply mt-6 grid gap-6 grid-cols-1 lg:grid-cols-3;
 }
 .info-section {
-  @apply mb-6 p-6 bg-gray-800 bg-opacity-60 rounded-lg border-l-4 border-red-600 flex flex-col md:flex-row items-center;
+  @apply p-6 bg-gray-800 bg-opacity-60 rounded-lg border-l-4 border-red-600 flex flex-col md:flex-row items-center transition-transform duration-300 transform hover:-translate-y-1;
 }
 .info-image {
   @apply w-full md:w-1/3 h-32 md:h-40 mb-4 md:mb-0 md:mr-6 rounded-lg flex items-center justify-center bg-gray-700 bg-opacity-50 text-gray-400 text-sm;

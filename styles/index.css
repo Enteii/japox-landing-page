@@ -3,3 +3,103 @@
 @tailwind components;
 
 @tailwind utilities;
+
+body {
+  @apply bg-black text-white;
+  background: linear-gradient(135deg, #000000 0%, #1a1a1a 25%, #2a2a2a 50%, #1a1a1a 75%, #000000 100%);
+  background-attachment: fixed;
+}
+.hero-bg {
+  background: transparent;
+}
+.hero-title {
+  text-shadow: 0 0 10px rgba(225,45,57,0.6);
+  animation: hero-glow 3s ease-in-out infinite alternate;
+}
+@keyframes hero-glow {
+  from { text-shadow: 0 0 10px rgba(225,45,57,0.6); }
+  to { text-shadow: 0 0 20px rgba(225,45,57,1); }
+}
+.company-info {
+  @apply w-full py-16 px-6 lg:px-12 space-y-12 backdrop-blur;
+  background: transparent;
+}
+.company-title {
+  @apply text-5xl md:text-6xl font-extrabold tracking-wide text-center text-transparent bg-clip-text;
+  background-image: linear-gradient(to right, #ffffff, #f87171);
+}
+.company-description {
+  @apply text-center text-gray-200 text-xl max-w-4xl mx-auto mt-4 font-medium drop-shadow;
+}
+.stats-row {
+  @apply grid grid-cols-1 sm:grid-cols-3 gap-4 my-6;
+}
+.stat {
+  @apply text-center p-2;
+}
+.stat-number {
+  @apply text-2xl font-bold text-red-600 block mb-1;
+}
+.stat-label {
+  @apply text-gray-200 text-xs uppercase;
+}
+.detailed-info {
+  @apply mt-6 grid gap-6 grid-cols-1 md:grid-cols-2;
+}
+
+.detailed-info .info-section:last-child {
+  @apply md:col-span-2;
+}
+.info-section {
+  @apply p-4;
+}
+.info-text {
+  @apply text-gray-200 text-sm leading-relaxed;
+}
+.info-section h3 {
+  @apply text-red-600 text-lg font-semibold mb-2;
+}
+.info-section p {
+  @apply text-gray-200 text-sm leading-relaxed;
+}
+.feature-icon {
+  @apply text-4xl mb-2 animate-pulse;
+}
+.features-grid {
+  @apply grid grid-cols-1 md:grid-cols-3 gap-6 mt-8;
+}
+.feature-item {
+  @apply text-center p-4 transition-transform duration-300 transform hover:-translate-y-1;
+}
+.feature-title {
+  @apply text-red-600 font-semibold mb-1;
+}
+.feature-text {
+  @apply text-gray-200 text-sm;
+}
+.social-links {
+  @apply flex justify-center gap-4 mt-8 flex-wrap;
+}
+.social-link {
+  @apply w-14 h-14 flex items-center justify-center rounded-2xl bg-gray-800 bg-opacity-50 border border-red-800 text-white transition-transform duration-200;
+}
+.social-link:hover {
+  @apply -translate-y-1 scale-105 bg-red-600;
+}
+.fade-up-scroll {
+  opacity: 0;
+  transform: translateY(20px);
+  transition: opacity 0.6s ease-out, transform 0.6s ease-out;
+}
+
+.fade-up-scroll.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.ad-container {
+  @apply flex items-center justify-center w-full h-64 rounded-lg border border-gray-700 bg-gray-800 bg-opacity-50 text-gray-300;
+}
+.ad-link {
+  @apply text-red-400 underline hover:text-red-300 mt-2 block;
+}

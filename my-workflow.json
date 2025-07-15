@@ -1,0 +1,378 @@
+{
+  "name": "My workflow",
+  "nodes": [
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "b9aff7a1-6b5a-4fcd-a4f1-1caf9a0c2b4c",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -40,
+        40
+      ],
+      "id": "0a508d04-afe0-43f5-a9cf-16f513c45e74",
+      "name": "Webhook",
+      "webhookId": "b9aff7a1-6b5a-4fcd-a4f1-1caf9a0c2b4c"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a7badb13-2e77-4110-a275-e99dffb4b344",
+              "name": "body.rowValues",
+              "value": "={{ $json.body.rowValues }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        160,
+        40
+      ],
+      "id": "822204f5-55f0-49c0-bebc-4162ecaefcee",
+      "name": "Edit Fields"
+    },
+    {
+      "parameters": {
+        "jsCode": "// items is an array of all N car objects\nconst output = [];\n\nfor (const item of items) {\n  const r = item.json;\n  // build a single‐car prompt\n  const prompt = \n    `Create an engaging Facebook post summarizing this car listing:\\n\\n` +\n    `• ${r['0']} ${r['1']} ${r['2']} — ${r['7']} engine (${r['8']}), ` +\n    `${r['9']} ${r['10']}, color ${r['11']}, ` +\n    `seats: ${r['12'] + r['13']}, ${r['19']} km\\n` +\n    `Listing: ${r['3']}`;\n\n  output.push({ json: { prompt } });\n}\n\n// return one item _per_ car\nreturn output;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        40
+      ],
+      "id": "29734a29-d674-4b14-9cd7-bf474cc65d92",
+      "name": "Code1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// pull the array of rows out of the payload\nconst rows = $json.body.rowValues;\n// return one workflow item per row\nreturn rows.map(row => ({ json: row }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        400,
+        40
+      ],
+      "id": "40ab0607-9965-4b20-9fa6-824cbba87bbb",
+      "name": "Code2"
+    },
+    {
+      "parameters": {
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.lmChatOpenRouter",
+      "typeVersion": 1,
+      "position": [
+        860,
+        200
+      ],
+      "id": "37858f12-46a5-4c60-a30c-816157af46fe",
+      "name": "OpenRouter Chat Model",
+      "credentials": {
+        "openRouterApi": {
+          "id": "yd3uWhjwS6dhUDQT",
+          "name": "OpenRouter account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "promptType": "define",
+        "text": "={{ $json.prompt }}",
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.agent",
+      "typeVersion": 2,
+      "position": [
+        860,
+        40
+      ],
+      "id": "feb67e37-c409-4838-98c0-54efcc500197",
+      "name": "AI Agent"
+    },
+    {
+      "parameters": {
+        "method": "POST",
+        "url": "https://openrouter.ai/",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequestTool",
+      "typeVersion": 4.2,
+      "position": [
+        1020,
+        220
+      ],
+      "id": "6a9bfd7d-3006-4a84-a4de-568183e2bd7f",
+      "name": "HTTP Request"
+    },
+    {
+      "parameters": {
+        "modelId": {
+          "__rl": true,
+          "value": "gpt-3.5-turbo",
+          "mode": "list",
+          "cachedResultName": "GPT-3.5-TURBO"
+        },
+        "messages": {
+          "values": [
+            {
+              "content": "You are a friendly automotive copywriter who turns raw car-listing data into punchy Facebook posts.",
+              "role": "system"
+            },
+            {
+              "content": "={{ $json.prompt }}"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "@n8n/n8n-nodes-langchain.openAi",
+      "typeVersion": 1.8,
+      "position": [
+        860,
+        580
+      ],
+      "id": "e336c669-01da-4638-bebd-f5723d50ea26",
+      "name": "OpenAI",
+      "credentials": {
+        "openAiApi": {
+          "id": "rXhdNaPjAjJeeGht",
+          "name": "OpenAi account"
+        }
+      }
+    },
+    {
+      "parameters": {
+        "httpMethod": "POST",
+        "path": "b9aff7a1-6b5a-4fcd-a4f1-1caf9a0c2b4c",
+        "options": {}
+      },
+      "type": "n8n-nodes-base.webhook",
+      "typeVersion": 2,
+      "position": [
+        -40,
+        580
+      ],
+      "id": "79adcec3-877f-4376-9000-36d88db5ccfb",
+      "name": "Webhook1",
+      "webhookId": "b9aff7a1-6b5a-4fcd-a4f1-1caf9a0c2b4c"
+    },
+    {
+      "parameters": {
+        "assignments": {
+          "assignments": [
+            {
+              "id": "a7badb13-2e77-4110-a275-e99dffb4b344",
+              "name": "body.rowValues",
+              "value": "={{ $json.body.rowValues }}",
+              "type": "array"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.set",
+      "typeVersion": 3.4,
+      "position": [
+        160,
+        580
+      ],
+      "id": "4de7e79f-1705-4e1b-be4e-18c4bfae5d51",
+      "name": "Edit Fields1"
+    },
+    {
+      "parameters": {
+        "jsCode": "// items is an array of all N car objects\nconst output = [];\n\nfor (const item of items) {\n  const r = item.json;\n  // build a single‐car prompt\n  const prompt = \n    `Create an engaging Facebook post summarizing this car listing:\\n\\n` +\n    `• ${r['0']} ${r['1']} ${r['2']} — ${r['7']} engine (${r['8']}), ` +\n    `${r['9']} ${r['10']}, color ${r['11']}, ` +\n    `seats: ${r['12'] + r['13']}, ${r['19']} km\\n` +\n    `Listing: ${r['3']}`;\n\n  output.push({ json: { prompt } });\n}\n\n// return one item _per_ car\nreturn output;\n"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        640,
+        580
+      ],
+      "id": "c585236f-f001-48b8-864f-021d4c9a70a0",
+      "name": "Code"
+    },
+    {
+      "parameters": {
+        "jsCode": "// pull the array of rows out of the payload\nconst rows = $json.body.rowValues;\n// return one workflow item per row\nreturn rows.map(row => ({ json: row }));"
+      },
+      "type": "n8n-nodes-base.code",
+      "typeVersion": 2,
+      "position": [
+        400,
+        580
+      ],
+      "id": "013e7aca-6209-4bd9-a45d-ec7170f6b5fe",
+      "name": "Code3"
+    },
+    {
+      "parameters": {
+        "url": "https://n8n.srv859191.hstgr.cloud/rest/workflows",
+        "sendHeaders": true,
+        "headerParameters": {
+          "parameters": [
+            {
+              "name": "X-N8N-API-KEY",
+              "value": "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJzdWIiOiIzM2NmOTkyOS01OWZjLTQ5NTctYjNlYi1mY2Q0YzFiMjEwYTUiLCJpc3MiOiJuOG4iLCJhdWQiOiJwdWJsaWMtYXBpIiwiaWF0IjoxNzUxMzQ1MjY5LCJleHAiOjE3NTkwOTY4MDB9.t6u6neQ3Ryo8wHSknTcXTBDkoBVUwsN748a4AZMnBXU"
+            }
+          ]
+        },
+        "options": {}
+      },
+      "type": "n8n-nodes-base.httpRequest",
+      "typeVersion": 4.2,
+      "position": [
+        1220,
+        40
+      ],
+      "id": "d0b790c2-6c85-4b70-aff3-b464761b87e5",
+      "name": "HTTP Request1"
+    }
+  ],
+  "pinData": {},
+  "connections": {
+    "Webhook": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields": {
+      "main": [
+        [
+          {
+            "node": "Code2",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code1": {
+      "main": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code2": {
+      "main": [
+        [
+          {
+            "node": "Code1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "OpenRouter Chat Model": {
+      "ai_languageModel": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_languageModel",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "HTTP Request": {
+      "ai_tool": [
+        [
+          {
+            "node": "AI Agent",
+            "type": "ai_tool",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Webhook1": {
+      "main": [
+        [
+          {
+            "node": "Edit Fields1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Edit Fields1": {
+      "main": [
+        [
+          {
+            "node": "Code3",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code3": {
+      "main": [
+        [
+          {
+            "node": "Code",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "Code": {
+      "main": [
+        [
+          {
+            "node": "OpenAI",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    },
+    "AI Agent": {
+      "main": [
+        [
+          {
+            "node": "HTTP Request1",
+            "type": "main",
+            "index": 0
+          }
+        ]
+      ]
+    }
+  },
+  "active": false,
+  "settings": {
+    "executionOrder": "v1"
+  },
+  "versionId": "59303121-6b3c-4b45-af19-1e946dd268ed",
+  "meta": {
+    "templateCredsSetupCompleted": true,
+    "instanceId": "a8fb6d5f3579301cab195632c10a2aca68fa756b07fd51ea8a476ee3ade2d713"
+  },
+  "id": "MsUrDnSNx3nXMbip",
+  "tags": []
+}

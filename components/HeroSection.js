@@ -15,17 +15,17 @@ export default function HeroSection() {
 
   return (
     <section
-      className="header hero-bg relative pt-16 items-center flex overflow-hidden"
+      className="header hero-bg relative pt-16 items-center flex flex-col overflow-hidden"
       style={{ minHeight: height }}
     >
+      <img
+        src="/img/TOP_banner01.png"
+        alt="Top banner"
+        className="w-full"
+      />
       <div className="container mx-auto flex flex-wrap items-start px-4">
         <div className="w-full md:w-6/12 px-4">
           <div className="pt-32 sm:pt-0 text-left">
-            <img
-              src="/img/TOP_banner01.png"
-              alt="Top banner"
-              className="mb-4 max-w-full"
-            />
             <h2 className="hero-title font-semibold text-4xl text-red-600">
               JAPOX - Premium Japanese Performance
             </h2>

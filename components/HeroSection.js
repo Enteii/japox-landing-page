@@ -21,7 +21,7 @@ export default function HeroSection() {
       <img
         src="/img/TOP_banner01.png"
         alt="Top banner"
-        className="w-full"
+        className="w-full max-h-60 object-contain"
       />
       <div className="container mx-auto flex flex-wrap items-start px-4">
         <div className="w-full md:w-6/12 px-4">

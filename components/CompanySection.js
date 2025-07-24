@@ -7,7 +7,11 @@ export default function CompanySection() {
   return (
     <section className="py-20">
       <div className="container mx-auto px-4">
-        <h2 className="company-title">Premium Japanese Used Car Export</h2>
+        <img
+          src="/img/005.png"
+          alt="Premium Japanese Used Car Export for U.S. JDM enthusiasts"
+          className="mx-auto mb-4 w-full max-w-md"
+        />
         <p className="company-description">
           JAPOX Corporation (ジャポックス株式会社) revolutionizes the global automobile trade through cutting-edge e-commerce and uncompromising quality.
         </p>
@@ -24,16 +28,19 @@ export default function CompanySection() {
                   icon="fa-building"
                   title="Company Heritage"
                   text="Founded to export vehicles beyond the reach of major trading companies, JAPOX now operates Japan's largest used car buying franchise."
+                  image="002.png"
                 />
                 <InfoSection
                   icon="fa-globe-americas"
                   title="Global Reach & Markets"
                   text="Delivering premium Japanese vehicles across Africa, Asia, South America and Central Asia, with a focus on sustainable transportation."
+                  image="003.png"
                 />
                 <InfoSection
                   icon="fa-cogs"
                   title="Technology Innovation"
                   text="Our proprietary platform connects overseas buyers directly with Japanese dealers for real-time auctions and full export support."
+                  image="004.png"
                 />
               </div>
               <div className="features-grid">

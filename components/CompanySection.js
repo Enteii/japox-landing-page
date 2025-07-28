@@ -35,6 +35,7 @@ export default function CompanySection() {
                   title="Global Reach & Markets"
                   text="Delivering premium Japanese vehicles across Africa, Asia, South America and Central Asia, with a focus on sustainable transportation."
                   image="003.png"
+                  alignRight
                 />
                 <InfoSection
                   icon="fa-cogs"

@@ -1,13 +1,14 @@
 import React from "react";
 import useScrollReveal from "./useScrollReveal";
 
-export default function InfoSection({ icon, title, text, image }) {
+export default function InfoSection({ icon, title, text, image, alignRight }) {
   const revealRef = useScrollReveal();
+  const containerClasses = `info-section fade-up-scroll flex items-start ${
+    alignRight ? "flex-row-reverse text-right" : ""
+  }`;
+  const imgSpacing = alignRight ? "mr-4" : "ml-4";
   return (
-    <div
-      ref={revealRef}
-      className="info-section fade-up-scroll flex items-start"
-    >
+    <div ref={revealRef} className={containerClasses}>
       <div>
         <h3 className="flex items-center mb-2">
           <i className={`fas ${icon} mr-2`} /> {title}
@@ -18,7 +19,7 @@ export default function InfoSection({ icon, title, text, image }) {
         <img
           src={`/img/${image}`}
           alt={`${title} illustration for JDM enthusiasts`}
-          className="ml-4 w-24 h-24 object-cover rounded"
+          className={`${imgSpacing} w-24 h-24 object-cover rounded`}
         />
       )}
     </div>

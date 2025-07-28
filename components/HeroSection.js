@@ -1,22 +1,10 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import TikTokFeed from "./TikTokFeed";
 
 export default function HeroSection() {
-  const [height, setHeight] = useState(0);
-
-  useEffect(() => {
-    function handleResize() {
-      setHeight(window.innerHeight);
-    }
-    handleResize();
-    window.addEventListener("resize", handleResize);
-    return () => window.removeEventListener("resize", handleResize);
-  }, []);
-
   return (
     <section
-      className="header hero-bg relative pt-16 items-center flex flex-col overflow-hidden"
-      style={{ minHeight: height }}
+      className="header hero-bg relative pt-16 items-center flex flex-col min-h-screen"
     >
       <img
         src="/img/TOP_banner01.png"
